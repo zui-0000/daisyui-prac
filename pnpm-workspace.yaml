@@ -6,7 +6,7 @@ catalogs:
     "@fontsource-variable/geist": "^5.2.8"
     "@tanstack/react-form": ^1.28.6
     "@tanstack/react-query": ^5.96.2
-    "@tanstack/react-router": ^1.168.10
+    "@tanstack/react-router": ^1.168.18
     "clsx": "^2.1.1"
     "effect": ^3.21.0
     "lucide-react": ^1.7.0
@@ -18,7 +18,7 @@ catalogs:
     "@biomejs/biome": 2.4.11
     "@commitlint/cli": ^20.5.0
     "@commitlint/config-conventional": ^20.5.0
-    "@tanstack/react-router-devtools": ^1.166.11
+    "@tanstack/react-router-devtools": ^1.166.13
     "@types/node": 24.12.0
     "@types/react": ^19.2.14
     "@types/react-dom": ^19.2.3
