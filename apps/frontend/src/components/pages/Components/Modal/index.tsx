@@ -1,8 +1,8 @@
 import { Button, Modal, ModalAction, ModalBox } from "@packages/ui";
 import type { FC } from "react";
 import { useState } from "react";
-import { PageHeader } from "~/components/common/ComponentPageHeader";
-import { Section } from "~/components/common/ComponentSection";
+import { ComponentPageHeader } from "~/components/common/ComponentPageHeader";
+import { ComponentSection } from "~/components/common/ComponentSection";
 import { CommonLayout } from "~/components/layouts/CommonLayout";
 
 export const ModalPage: FC = () => {
@@ -12,13 +12,16 @@ export const ModalPage: FC = () => {
   return (
     <CommonLayout>
       <div>
-        <PageHeader
+        <ComponentPageHeader
           title="Modal"
           category="アクション"
           description="オーバーレイ表示のダイアログです。open prop で表示状態を制御し、onClose でバックドロップクリック時の挙動を指定します。"
         />
 
-        <Section title="基本的な使い方" description="open state を useState で管理します。">
+        <ComponentSection
+          title="基本的な使い方"
+          description="open state を useState で管理します。"
+        >
           <Button color="primary" onClick={() => setBasicOpen(true)}>
             モーダルを開く
           </Button>
@@ -35,9 +38,9 @@ export const ModalPage: FC = () => {
               </ModalAction>
             </ModalBox>
           </Modal>
-        </Section>
+        </ComponentSection>
 
-        <Section title="確認ダイアログ" description="アクション確認に使うパターンです。">
+        <ComponentSection title="確認ダイアログ" description="アクション確認に使うパターンです。">
           <Button color="error" variant="outline" onClick={() => setConfirmOpen(true)}>
             削除する
           </Button>
@@ -57,7 +60,7 @@ export const ModalPage: FC = () => {
               </ModalAction>
             </ModalBox>
           </Modal>
-        </Section>
+        </ComponentSection>
       </div>
     </CommonLayout>
   );

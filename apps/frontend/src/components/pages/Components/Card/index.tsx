@@ -1,19 +1,19 @@
 import { Badge, Button, Card, CardActions, CardBody, CardTitle } from "@packages/ui";
 import type { FC } from "react";
-import { PageHeader } from "~/components/common/ComponentPageHeader";
-import { Section } from "~/components/common/ComponentSection";
+import { ComponentPageHeader } from "~/components/common/ComponentPageHeader";
+import { ComponentSection } from "~/components/common/ComponentSection";
 import { CommonLayout } from "~/components/layouts/CommonLayout";
 
 export const CardPage: FC = () => (
   <CommonLayout>
     <div>
-      <PageHeader
+      <ComponentPageHeader
         title="Card"
         category="データ表示"
         description="コンテンツをまとめるコンテナコンポーネントです。Card / CardBody / CardTitle / CardActions を組み合わせて使います。"
       />
 
-      <Section title="基本的な使い方">
+      <ComponentSection title="基本的な使い方">
         <Card className="w-72 bg-base-100 shadow-md">
           <CardBody>
             <CardTitle>カードタイトル</CardTitle>
@@ -27,9 +27,9 @@ export const CardPage: FC = () => (
             </CardActions>
           </CardBody>
         </Card>
-      </Section>
+      </ComponentSection>
 
-      <Section title="コンパクト">
+      <ComponentSection title="コンパクト">
         <Card compact bordered className="w-64">
           <CardBody>
             <CardTitle>Compact Card</CardTitle>
@@ -41,9 +41,9 @@ export const CardPage: FC = () => (
             </CardActions>
           </CardBody>
         </Card>
-      </Section>
+      </ComponentSection>
 
-      <Section title="バッジ付き">
+      <ComponentSection title="バッジ付き">
         <Card className="w-72 bg-base-100 shadow-md">
           <CardBody>
             <div className="flex items-start justify-between">
@@ -63,7 +63,7 @@ export const CardPage: FC = () => (
             </CardActions>
           </CardBody>
         </Card>
-      </Section>
+      </ComponentSection>
     </div>
   </CommonLayout>
 );

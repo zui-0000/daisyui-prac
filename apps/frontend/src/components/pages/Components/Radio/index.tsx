@@ -1,19 +1,22 @@
 import { Radio } from "@packages/ui";
 import type { FC } from "react";
-import { PageHeader } from "~/components/common/ComponentPageHeader";
-import { Section } from "~/components/common/ComponentSection";
+import { ComponentPageHeader } from "~/components/common/ComponentPageHeader";
+import { ComponentSection } from "~/components/common/ComponentSection";
 import { CommonLayout } from "~/components/layouts/CommonLayout";
 
 export const RadioPage: FC = () => (
   <CommonLayout>
     <div>
-      <PageHeader
+      <ComponentPageHeader
         title="Radio"
         category="データ入力"
         description="ラジオボタンです。同じ name を持つ Radio を並べることで、単一選択グループを形成します。"
       />
 
-      <Section title="基本的な使い方" description="name prop を揃えることでグループになります。">
+      <ComponentSection
+        title="基本的な使い方"
+        description="name prop を揃えることでグループになります。"
+      >
         <div className="flex flex-col gap-2">
           <label htmlFor="radio-a" className="flex items-center gap-2">
             <Radio id="radio-a" name="demo" color="primary" defaultChecked />
@@ -28,24 +31,24 @@ export const RadioPage: FC = () => (
             <span>オプション C</span>
           </label>
         </div>
-      </Section>
+      </ComponentSection>
 
-      <Section title="カラー">
+      <ComponentSection title="カラー">
         <Radio name="color" color="primary" defaultChecked />
         <Radio name="color" color="secondary" />
         <Radio name="color" color="accent" />
         <Radio name="color" color="success" />
         <Radio name="color" color="warning" />
         <Radio name="color" color="error" />
-      </Section>
+      </ComponentSection>
 
-      <Section title="サイズ">
+      <ComponentSection title="サイズ">
         <Radio name="size" radioSize="xs" defaultChecked />
         <Radio name="size" radioSize="sm" />
         <Radio name="size" radioSize="md" />
         <Radio name="size" radioSize="lg" />
         <Radio name="size" radioSize="xl" />
-      </Section>
+      </ComponentSection>
     </div>
   </CommonLayout>
 );

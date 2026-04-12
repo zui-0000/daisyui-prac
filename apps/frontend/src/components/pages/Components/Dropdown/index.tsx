@@ -1,19 +1,19 @@
 import { Button, Dropdown, DropdownItem, DropdownMenu } from "@packages/ui";
 import type { FC } from "react";
-import { PageHeader } from "~/components/common/ComponentPageHeader";
-import { Section } from "~/components/common/ComponentSection";
+import { ComponentPageHeader } from "~/components/common/ComponentPageHeader";
+import { ComponentSection } from "~/components/common/ComponentSection";
 import { CommonLayout } from "~/components/layouts/CommonLayout";
 
 export const DropdownPage: FC = () => (
   <CommonLayout>
     <div>
-      <PageHeader
+      <ComponentPageHeader
         title="Dropdown"
         category="アクション"
         description="トリガー要素をクリックすると展開されるドロップダウンメニューです。position prop で展開方向を制御できます。"
       />
 
-      <Section
+      <ComponentSection
         title="基本的な使い方"
         description="Dropdown > trigger + DropdownMenu > DropdownItem の構造で使います。"
       >
@@ -33,9 +33,9 @@ export const DropdownPage: FC = () => (
             </DropdownItem>
           </DropdownMenu>
         </Dropdown>
-      </Section>
+      </ComponentSection>
 
-      <Section
+      <ComponentSection
         title="展開方向"
         description="position prop で top / bottom / left / right および -end バリアントを指定できます。"
       >
@@ -72,9 +72,12 @@ export const DropdownPage: FC = () => (
             </DropdownItem>
           </DropdownMenu>
         </Dropdown>
-      </Section>
+      </ComponentSection>
 
-      <Section title="ホバーで開く" description="hover prop を付けるとマウスオーバーで展開します。">
+      <ComponentSection
+        title="ホバーで開く"
+        description="hover prop を付けるとマウスオーバーで展開します。"
+      >
         <Dropdown hover>
           <Button color="secondary" tabIndex={0}>
             Hover me ▾
@@ -91,7 +94,7 @@ export const DropdownPage: FC = () => (
             </DropdownItem>
           </DropdownMenu>
         </Dropdown>
-      </Section>
+      </ComponentSection>
     </div>
   </CommonLayout>
 );

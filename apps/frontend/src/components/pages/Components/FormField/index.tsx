@@ -1,27 +1,27 @@
 import { Button, Checkbox, FormField, Input, Select, Textarea } from "@packages/ui";
 import type { FC } from "react";
-import { PageHeader } from "~/components/common/ComponentPageHeader";
-import { Section } from "~/components/common/ComponentSection";
+import { ComponentPageHeader } from "~/components/common/ComponentPageHeader";
+import { ComponentSection } from "~/components/common/ComponentSection";
 import { CommonLayout } from "~/components/layouts/CommonLayout";
 
 export const FormFieldPage: FC = () => (
   <CommonLayout>
     <div>
-      <PageHeader
+      <ComponentPageHeader
         title="FormField"
         category="データ入力"
         description="ラベル・ヒント・エラーメッセージをまとめたフォームフィールドコンテナです。htmlFor prop で input と label を紐付けます。"
       />
 
-      <Section title="基本的な使い方" row={false}>
+      <ComponentSection title="基本的な使い方" row={false}>
         <div className="w-full max-w-sm">
           <FormField label="メールアドレス" htmlFor="email">
             <Input id="email" type="email" placeholder="you@example.com" bordered />
           </FormField>
         </div>
-      </Section>
+      </ComponentSection>
 
-      <Section title="必須・ヒント付き" row={false}>
+      <ComponentSection title="必須・ヒント付き" row={false}>
         <div className="w-full max-w-sm">
           <FormField
             label="ユーザー名"
@@ -32,9 +32,9 @@ export const FormFieldPage: FC = () => (
             <Input id="username" placeholder="username" bordered />
           </FormField>
         </div>
-      </Section>
+      </ComponentSection>
 
-      <Section
+      <ComponentSection
         title="エラー表示"
         description="error prop を渡すとエラーメッセージが赤字で表示されます。"
         row={false}
@@ -48,9 +48,9 @@ export const FormFieldPage: FC = () => (
             <Input id="password" type="password" color="error" bordered placeholder="password" />
           </FormField>
         </div>
-      </Section>
+      </ComponentSection>
 
-      <Section
+      <ComponentSection
         title="labelAlt付き"
         description="labelAlt prop でラベルの右側に補足テキストを表示します。"
         row={false}
@@ -60,9 +60,9 @@ export const FormFieldPage: FC = () => (
             <Textarea id="bio" placeholder="自己紹介を入力..." bordered />
           </FormField>
         </div>
-      </Section>
+      </ComponentSection>
 
-      <Section title="フォーム例" row={false}>
+      <ComponentSection title="フォーム例" row={false}>
         <form className="w-full max-w-sm space-y-4">
           <FormField label="名前" htmlFor="name" required>
             <Input id="name" placeholder="山田 太郎" bordered />
@@ -84,7 +84,7 @@ export const FormFieldPage: FC = () => (
             送信
           </Button>
         </form>
-      </Section>
+      </ComponentSection>
     </div>
   </CommonLayout>
 );

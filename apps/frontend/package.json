@@ -12,7 +12,7 @@
     "check:jscpd": "jscpd",
     "check:knip": "knip",
     "check:lefthook": "pnpm check:type && pnpm check:biome",
-    "check:type": "tsgo --noEmit",
+    "check:type": "tsgo --noEmit -p tsconfig.app.json",
     "dev": "vite --mode localDev",
     "fix:biome": "biome check --write .",
     "fix:knip": "knip --fix --no-exit-code",

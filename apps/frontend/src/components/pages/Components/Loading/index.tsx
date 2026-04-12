@@ -1,19 +1,22 @@
 import { Loading } from "@packages/ui";
 import type { FC } from "react";
-import { PageHeader } from "~/components/common/ComponentPageHeader";
-import { Section } from "~/components/common/ComponentSection";
+import { ComponentPageHeader } from "~/components/common/ComponentPageHeader";
+import { ComponentSection } from "~/components/common/ComponentSection";
 import { CommonLayout } from "~/components/layouts/CommonLayout";
 
 export const LoadingPage: FC = () => (
   <CommonLayout>
     <div>
-      <PageHeader
+      <ComponentPageHeader
         title="Loading"
         category="フィードバック"
         description="ローディング状態を示すアニメーションコンポーネントです。variant で spinner / dots / ring / ball / bars / infinity の 6 種類から選べます。"
       />
 
-      <Section title="バリアント" description="variant prop でアニメーションの種類を変更します。">
+      <ComponentSection
+        title="バリアント"
+        description="variant prop でアニメーションの種類を変更します。"
+      >
         <div className="flex flex-col items-center gap-1">
           <Loading variant="spinner" />
           <span className="text-xs">spinner</span>
@@ -38,24 +41,24 @@ export const LoadingPage: FC = () => (
           <Loading variant="infinity" />
           <span className="text-xs">infinity</span>
         </div>
-      </Section>
+      </ComponentSection>
 
-      <Section title="カラー">
+      <ComponentSection title="カラー">
         <Loading variant="spinner" color="primary" />
         <Loading variant="spinner" color="secondary" />
         <Loading variant="spinner" color="accent" />
         <Loading variant="spinner" color="success" />
         <Loading variant="spinner" color="warning" />
         <Loading variant="spinner" color="error" />
-      </Section>
+      </ComponentSection>
 
-      <Section title="サイズ">
+      <ComponentSection title="サイズ">
         <Loading variant="spinner" loadingSize="xs" />
         <Loading variant="spinner" loadingSize="sm" />
         <Loading variant="spinner" loadingSize="md" />
         <Loading variant="spinner" loadingSize="lg" />
         <Loading variant="spinner" loadingSize="xl" />
-      </Section>
+      </ComponentSection>
     </div>
   </CommonLayout>
 );

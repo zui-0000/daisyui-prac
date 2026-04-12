@@ -1,8 +1,8 @@
 import { Tab, Tabs } from "@packages/ui";
 import type { FC } from "react";
 import { useState } from "react";
-import { PageHeader } from "~/components/common/ComponentPageHeader";
-import { Section } from "~/components/common/ComponentSection";
+import { ComponentPageHeader } from "~/components/common/ComponentPageHeader";
+import { ComponentSection } from "~/components/common/ComponentSection";
 import { CommonLayout } from "~/components/layouts/CommonLayout";
 
 export const TabsPage: FC = () => {
@@ -11,13 +11,13 @@ export const TabsPage: FC = () => {
   return (
     <CommonLayout>
       <div>
-        <PageHeader
+        <ComponentPageHeader
           title="Tabs"
           category="ナビゲーション"
           description="コンテンツを切り替えるタブUIです。Tabs に variant prop でスタイルを指定し、Tab の active prop でアクティブ状態を表します。"
         />
 
-        <Section
+        <ComponentSection
           title="バリアント"
           description="variant prop で boxed / bordered / lifted を指定します。"
           row={false}
@@ -46,9 +46,9 @@ export const TabsPage: FC = () => {
               <Tab>タブ 3</Tab>
             </Tabs>
           </div>
-        </Section>
+        </ComponentSection>
 
-        <Section
+        <ComponentSection
           title="インタラクティブな例"
           description="useState でアクティブタブを管理します。"
           row={false}
@@ -67,9 +67,9 @@ export const TabsPage: FC = () => {
               {activeTab === 2 && <p className="text-sm">設定タブのコンテンツです。</p>}
             </div>
           </div>
-        </Section>
+        </ComponentSection>
 
-        <Section title="サイズ">
+        <ComponentSection title="サイズ">
           <Tabs variant="bordered" tabsSize="xs">
             <Tab active>XS</Tab>
             <Tab>Tab</Tab>
@@ -86,7 +86,7 @@ export const TabsPage: FC = () => {
             <Tab active>LG</Tab>
             <Tab>Tab</Tab>
           </Tabs>
-        </Section>
+        </ComponentSection>
       </div>
     </CommonLayout>
   );

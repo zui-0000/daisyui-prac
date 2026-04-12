@@ -1,19 +1,19 @@
 import { Button } from "@packages/ui";
 import type { FC } from "react";
-import { PageHeader } from "~/components/common/ComponentPageHeader";
-import { Section } from "~/components/common/ComponentSection";
+import { ComponentPageHeader } from "~/components/common/ComponentPageHeader";
+import { ComponentSection } from "~/components/common/ComponentSection";
 import { CommonLayout } from "~/components/layouts/CommonLayout";
 
 export const ButtonPage: FC = () => (
   <CommonLayout>
     <div>
-      <PageHeader
+      <ComponentPageHeader
         title="Button"
         category="アクション"
         description="アクションをトリガーするインタラクティブな要素です。color / size / variant などの Props でスタイルを柔軟に変更できます。"
       />
 
-      <Section title="カラー" description="color prop でボタンの意味合いを表します。">
+      <ComponentSection title="カラー" description="color prop でボタンの意味合いを表します。">
         <Button>デフォルト</Button>
         <Button color="neutral">Neutral</Button>
         <Button color="primary">Primary</Button>
@@ -25,9 +25,9 @@ export const ButtonPage: FC = () => (
         <Button color="error">Error</Button>
         <Button color="ghost">Ghost</Button>
         <Button color="link">Link</Button>
-      </Section>
+      </ComponentSection>
 
-      <Section
+      <ComponentSection
         title="バリアント"
         description="variant prop でアウトライン・ソフト・破線スタイルに変更します。"
       >
@@ -43,17 +43,23 @@ export const ButtonPage: FC = () => (
         <Button color="primary" variant="dash">
           Dash
         </Button>
-      </Section>
+      </ComponentSection>
 
-      <Section title="サイズ" description="size prop で xs / sm / md / lg / xl を指定します。">
+      <ComponentSection
+        title="サイズ"
+        description="size prop で xs / sm / md / lg / xl を指定します。"
+      >
         <Button size="xs">XSmall</Button>
         <Button size="sm">Small</Button>
         <Button size="md">Medium</Button>
         <Button size="lg">Large</Button>
         <Button size="xl">XLarge</Button>
-      </Section>
+      </ComponentSection>
 
-      <Section title="形状" description="circle / square / wide / block で形状を変更します。">
+      <ComponentSection
+        title="形状"
+        description="circle / square / wide / block で形状を変更します。"
+      >
         <Button color="primary" circle>
           +
         </Button>
@@ -63,9 +69,9 @@ export const ButtonPage: FC = () => (
         <Button color="accent" wide>
           Wide Button
         </Button>
-      </Section>
+      </ComponentSection>
 
-      <Section title="状態" description="loading / active / disabled で状態を表現します。">
+      <ComponentSection title="状態" description="loading / active / disabled で状態を表現します。">
         <Button color="primary" loading>
           Loading
         </Button>
@@ -75,7 +81,7 @@ export const ButtonPage: FC = () => (
         <Button color="primary" disabled>
           Disabled
         </Button>
-      </Section>
+      </ComponentSection>
     </div>
   </CommonLayout>
 );

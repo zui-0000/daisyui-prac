@@ -1,19 +1,19 @@
 import { Button, Input, Join, JoinItem, Select } from "@packages/ui";
 import type { FC } from "react";
-import { PageHeader } from "~/components/common/ComponentPageHeader";
-import { Section } from "~/components/common/ComponentSection";
+import { ComponentPageHeader } from "~/components/common/ComponentPageHeader";
+import { ComponentSection } from "~/components/common/ComponentSection";
 import { CommonLayout } from "~/components/layouts/CommonLayout";
 
 export const JoinPage: FC = () => (
   <CommonLayout>
     <div>
-      <PageHeader
+      <ComponentPageHeader
         title="Join"
         category="レイアウト"
         description="複数の要素を隙間なく結合するグループコンテナです。JoinItem でラップした子要素が接続して表示されます。"
       />
 
-      <Section title="ボタングループ" description="join-item クラスが境界を共有します。">
+      <ComponentSection title="ボタングループ" description="join-item クラスが境界を共有します。">
         <Join>
           <JoinItem>
             <Button>左</Button>
@@ -38,9 +38,9 @@ export const JoinPage: FC = () => (
             <Button color="primary">C</Button>
           </JoinItem>
         </Join>
-      </Section>
+      </ComponentSection>
 
-      <Section title="入力 + ボタン" description="検索バーのようなUIに使います。">
+      <ComponentSection title="入力 + ボタン" description="検索バーのようなUIに使います。">
         <Join>
           <JoinItem>
             <Input bordered placeholder="検索..." className="w-48" />
@@ -49,9 +49,9 @@ export const JoinPage: FC = () => (
             <Button color="primary">検索</Button>
           </JoinItem>
         </Join>
-      </Section>
+      </ComponentSection>
 
-      <Section title="セレクト + 入力" row={false}>
+      <ComponentSection title="セレクト + 入力" row={false}>
         <Join>
           <JoinItem>
             <Select>
@@ -66,9 +66,9 @@ export const JoinPage: FC = () => (
             <Button color="primary">実行</Button>
           </JoinItem>
         </Join>
-      </Section>
+      </ComponentSection>
 
-      <Section title="縦並び" description="vertical prop で縦方向に結合します。">
+      <ComponentSection title="縦並び" description="vertical prop で縦方向に結合します。">
         <Join vertical>
           <JoinItem>
             <Button className="w-32">上</Button>
@@ -80,7 +80,7 @@ export const JoinPage: FC = () => (
             <Button className="w-32">下</Button>
           </JoinItem>
         </Join>
-      </Section>
+      </ComponentSection>
     </div>
   </CommonLayout>
 );

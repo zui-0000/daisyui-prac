@@ -1,25 +1,28 @@
 import { Button, Tooltip } from "@packages/ui";
 import type { FC } from "react";
-import { PageHeader } from "~/components/common/ComponentPageHeader";
-import { Section } from "~/components/common/ComponentSection";
+import { ComponentPageHeader } from "~/components/common/ComponentPageHeader";
+import { ComponentSection } from "~/components/common/ComponentSection";
 import { CommonLayout } from "~/components/layouts/CommonLayout";
 
 export const TooltipPage: FC = () => (
   <CommonLayout>
     <div>
-      <PageHeader
+      <ComponentPageHeader
         title="Tooltip"
         category="フィードバック"
         description="要素にホバーしたときに説明テキストを表示するコンポーネントです。tip prop にテキストを渡し、position でツールチップの表示位置を指定します。"
       />
 
-      <Section title="基本的な使い方" description="tip prop にツールチップのテキストを指定します。">
+      <ComponentSection
+        title="基本的な使い方"
+        description="tip prop にツールチップのテキストを指定します。"
+      >
         <Tooltip tip="ここがツールチップです">
           <Button color="primary">ホバーしてみて</Button>
         </Tooltip>
-      </Section>
+      </ComponentSection>
 
-      <Section
+      <ComponentSection
         title="表示位置"
         description="position prop で top / bottom / left / right を指定します。"
       >
@@ -35,9 +38,9 @@ export const TooltipPage: FC = () => (
         <Tooltip tip="右に表示" position="right">
           <Button size="sm">Right</Button>
         </Tooltip>
-      </Section>
+      </ComponentSection>
 
-      <Section title="カラー">
+      <ComponentSection title="カラー">
         <Tooltip tip="Primary" color="primary">
           <Button size="sm" color="primary">
             Primary
@@ -58,13 +61,16 @@ export const TooltipPage: FC = () => (
             Error
           </Button>
         </Tooltip>
-      </Section>
+      </ComponentSection>
 
-      <Section title="常に表示" description="open prop を付けると常にツールチップが表示されます。">
+      <ComponentSection
+        title="常に表示"
+        description="open prop を付けると常にツールチップが表示されます。"
+      >
         <Tooltip tip="常に表示されます" open>
           <Button>Open Tooltip</Button>
         </Tooltip>
-      </Section>
+      </ComponentSection>
     </div>
   </CommonLayout>
 );
