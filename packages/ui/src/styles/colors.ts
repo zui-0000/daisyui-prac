@@ -1,4 +1,11 @@
+const APP_PRIMARY_COLOR = "#f97316";
+const APP_SECONDARY_COLOR = "#eab308";
+
 export const colors = {
-  // プロジェクト固有のカラーをここに追加
-  HOGE_MODAL: "#000000",
+  APP_PRIMARY_COLOR,
+  APP_SECONDARY_COLOR,
+
+  // Button
+  PRIMARY_BUTTON: APP_PRIMARY_COLOR,
+  SECONDARY_BUTTON: APP_SECONDARY_COLOR,
 } as const;
