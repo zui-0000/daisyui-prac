@@ -3,7 +3,7 @@ import { createRouter } from "@tanstack/react-router";
 import { rootRoute } from "./rootRoute";
 import { topRoute } from "./routes";
 
-const routeTree = rootRoute.addChildren([rootRoute, topRoute]);
+const routeTree = rootRoute.addChildren([topRoute]);
 
 export const router = createRouter({
   routeTree,
