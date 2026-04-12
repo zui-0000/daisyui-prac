@@ -1,0 +1,37 @@
+{
+  "name": "daisyui-prac",
+  "version": "1.0.0",
+  "scripts": {
+    "check:catalog": "node scripts/checkCatalog.mjs",
+    "check:updates": "pnpm outdated --recursive --long",
+    "install:ci": "pnpm install --frozen-lockfile",
+    "dev:backend": "pnpm --filter ./apps/backend dev",
+    "dev:frontend": "pnpm --filter ./apps/frontend dev",
+    "fix:package-json": "sort-package-json package.json",
+    "prepare": "lefthook install",
+    "turbo-build:dev": "turbo run build:dev",
+    "turbo-build:prd": "turbo run build:prd",
+    "turbo-build:stg": "turbo run build:stg",
+    "turbo-check:biome": "turbo run check:biome",
+    "turbo-check:type": "turbo run check:type",
+    "turbo-test": "turbo run test",
+    "turbo-test:coverage": "turbo run test:coverage"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "catalog:devDependencies",
+    "@commitlint/config-conventional": "catalog:devDependencies",
+    "lefthook": "catalog:devDependencies",
+    "sort-package-json": "catalog:devDependencies",
+    "turbo": "catalog:devDependencies"
+  },
+  "packageManager": "pnpm@10.33.0",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "msw"
+    ],
+    "overrides": {
+      "reselect": "5.1.0"
+    }
+  }
+}

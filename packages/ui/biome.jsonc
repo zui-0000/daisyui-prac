@@ -1,0 +1,103 @@
+{
+  "root": true,
+  "$schema": "https://biomejs.dev/schemas/2.4.10/schema.json",
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": false
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineWidth": 100,
+    "lineEnding": "lf"
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "double",
+      "jsxQuoteStyle": "double",
+      "semicolons": "always",
+      "trailingCommas": "all"
+    }
+  },
+  "json": {
+    "formatter": {
+      "enabled": true
+    }
+  },
+  "files": {
+    "ignoreUnknown": false,
+    "includes": [
+      "**/*",
+      "!dist",
+      "!node_modules",
+      "!coverage",
+      "!src/openapi",
+      "!public/mockServiceWorker.js"
+    ]
+  },
+  "assist": {
+    "enabled": true,
+    "actions": {
+      "recommended": true,
+      "source": {
+        "organizeImports": {
+          "level": "on",
+          "options": {
+            "identifierOrder": "lexicographic",
+            "groups": [
+              // builtins
+              { "source": [":NODE:", ":BUN:"] },
+              // packages (external)
+              { "source": [":PACKAGE:", ":PACKAGE_WITH_PROTOCOL:", ":URL:"] },
+              // internal alias
+              { "source": ["~/**"] },
+              // internal-ish
+              { "source": ["assets/**"] },
+              { "source": ["mocks/**"] },
+              // relative
+              { "source": [":PATH:"] },
+              // type-only imports (最後)
+              { "type": true }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "linter": {
+    "enabled": true,
+    "domains": {
+      "react": "recommended"
+    },
+    "rules": {
+      "recommended": true,
+      "security": {
+        "noDangerouslySetInnerHtml": "warn",
+        "noDangerouslySetInnerHtmlWithChildren": "warn"
+      },
+      "style": {
+        "useImportType": {
+          "level": "error",
+          "options": {
+            "style": "separatedType"
+          }
+        }
+      },
+      "correctness": {
+        "noUnusedImports": "error",
+        // NOTE: hookの依存配列が不足している場合にエラーを出す
+        "useExhaustiveDependencies": "error"
+      },
+      "suspicious": {
+        "noImportCycles": "error"
+      }
+    }
+  },
+  "css": {
+    "parser": {
+      "tailwindDirectives": true
+    }
+  }
+}

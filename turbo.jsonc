@@ -1,0 +1,47 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "tasks": {
+    "build:dev": {
+      "outputs": ["dist/**"]
+    },
+    "build:local": {
+      "outputs": ["dist/**"]
+    },
+    "build:stg": {
+      "outputs": ["dist/**"]
+    },
+    "build:prd": {
+      "outputs": ["dist/**"]
+    },
+    // generate:api 完了後に check:biome と check:type を並列実行
+    "check:biome": {
+      "dependsOn": ["generate:api"]
+    },
+    "check:type": {
+      "dependsOn": ["generate:api"]
+    },
+    "check:knip": {},
+    // スキーマは常に最新を再生成する
+    "generate:api": {
+      "cache": false
+    },
+    "test": {
+      "dependsOn": ["generate:api"]
+    },
+    "test:coverage": {
+      "dependsOn": ["generate:api"],
+      "cache": false,
+      "outputs": ["coverage/**"]
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "lint:fix": {
+      "cache": false
+    },
+    "fix:biome": {
+      "cache": false
+    }
+  }
+}

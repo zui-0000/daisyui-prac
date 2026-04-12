@@ -1,0 +1,53 @@
+{
+  "name": "frontend",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:dev": "vite build --mode dev",
+    "build:local": "vite build --mode localDev",
+    "build:prd": "vite build --mode prd",
+    "build:stg": "vite build --mode stg",
+    "check:biome": "biome check .",
+    "check:jscpd": "jscpd",
+    "check:knip": "knip",
+    "check:lefthook": "pnpm check:type && pnpm check:biome",
+    "check:type": "tsgo --noEmit",
+    "dev": "vite --mode localDev",
+    "fix:biome": "biome check --write .",
+    "fix:knip": "knip --fix --no-exit-code",
+    "fix:package-json": "sort-package-json package.json",
+    "lint:fix": "pnpm fix:package-json && pnpm check:type && pnpm fix:biome",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@fontsource-variable/geist": "catalog:dependencies",
+    "@packages/ui": "workspace:*",
+    "@tanstack/react-form": "catalog:dependencies",
+    "@tanstack/react-query": "catalog:dependencies",
+    "@tanstack/react-router": "catalog:dependencies",
+    "clsx": "catalog:dependencies",
+    "effect": "catalog:dependencies",
+    "lucide-react": "catalog:dependencies",
+    "react": "catalog:dependencies",
+    "react-dom": "catalog:dependencies",
+    "zod": "catalog:dependencies"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "catalog:devDependencies",
+    "@tailwindcss/vite": "catalog:devDependencies",
+    "@tanstack/react-router-devtools": "catalog:devDependencies",
+    "@types/node": "catalog:devDependencies",
+    "@types/react": "catalog:devDependencies",
+    "@types/react-dom": "catalog:devDependencies",
+    "@typescript/native-preview": "catalog:devDependencies",
+    "@vitejs/plugin-react": "catalog:devDependencies",
+    "daisyui": "catalog:devDependencies",
+    "globals": "catalog:devDependencies",
+    "knip": "catalog:devDependencies",
+    "sort-package-json": "catalog:devDependencies",
+    "tailwindcss": "catalog:devDependencies",
+    "typescript": "catalog:devDependencies",
+    "vite": "catalog:devDependencies"
+  }
+}
