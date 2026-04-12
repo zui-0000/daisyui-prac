@@ -3,6 +3,16 @@ import type { HTMLAttributes, LiHTMLAttributes } from "react";
 
 type StepColor = "primary" | "secondary" | "accent" | "info" | "success" | "warning" | "error";
 
+const colorClass: Record<StepColor, string> = {
+  primary: "step-primary",
+  secondary: "step-secondary",
+  accent: "step-accent",
+  info: "step-info",
+  success: "step-success",
+  warning: "step-warning",
+  error: "step-error",
+};
+
 interface StepsProps extends HTMLAttributes<HTMLUListElement> {
   vertical?: boolean;
 }
@@ -22,8 +32,8 @@ export function Step({ dataContent, color, active, className, ...props }: StepPr
     <li
       className={cn(
         "step",
-        color && `step-${color}`,
-        active && `step-${color ?? "primary"}`,
+        color && colorClass[color],
+        active && colorClass[color ?? "primary"],
         className,
       )}
       data-content={dataContent}

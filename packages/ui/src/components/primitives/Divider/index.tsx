@@ -12,6 +12,21 @@ type DividerColor =
   | "neutral";
 type DividerPosition = "start" | "end";
 
+const colorClass: Record<DividerColor, string> = {
+  primary: "divider-primary",
+  secondary: "divider-secondary",
+  accent: "divider-accent",
+  info: "divider-info",
+  success: "divider-success",
+  warning: "divider-warning",
+  error: "divider-error",
+  neutral: "divider-neutral",
+};
+const positionClass: Record<DividerPosition, string> = {
+  start: "divider-start",
+  end: "divider-end",
+};
+
 interface DividerProps extends HTMLAttributes<HTMLDivElement> {
   vertical?: boolean;
   color?: DividerColor;
@@ -24,8 +39,8 @@ export function Divider({ vertical, color, position, className, ...props }: Divi
       className={cn(
         "divider",
         vertical && "divider-vertical",
-        color && `divider-${color}`,
-        position && `divider-${position}`,
+        color && colorClass[color],
+        position && positionClass[position],
         className,
       )}
       {...props}

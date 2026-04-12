@@ -4,6 +4,19 @@ import type { ButtonHTMLAttributes, HTMLAttributes } from "react";
 type TabsVariant = "boxed" | "bordered" | "lifted";
 type TabsSize = "xs" | "sm" | "md" | "lg" | "xl";
 
+const variantClass: Record<TabsVariant, string> = {
+  boxed: "tabs-boxed",
+  bordered: "tabs-bordered",
+  lifted: "tabs-lifted",
+};
+const sizeClass: Record<TabsSize, string> = {
+  xs: "tabs-xs",
+  sm: "tabs-sm",
+  md: "tabs-md",
+  lg: "tabs-lg",
+  xl: "tabs-xl",
+};
+
 interface TabsProps extends HTMLAttributes<HTMLDivElement> {
   variant?: TabsVariant;
   tabsSize?: TabsSize;
@@ -19,8 +32,8 @@ export function Tabs({ variant, tabsSize, className, ...props }: TabsProps) {
       role="tablist"
       className={cn(
         "tabs",
-        variant && `tabs-${variant}`,
-        tabsSize && `tabs-${tabsSize}`,
+        variant && variantClass[variant],
+        tabsSize && sizeClass[tabsSize],
         className,
       )}
       {...props}

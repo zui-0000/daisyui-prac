@@ -3,6 +3,16 @@ import type { HTMLAttributes } from "react";
 
 type StatValueColor = "primary" | "secondary" | "accent" | "info" | "success" | "warning" | "error";
 
+const colorClass: Record<StatValueColor, string> = {
+  primary: "text-primary",
+  secondary: "text-secondary",
+  accent: "text-accent",
+  info: "text-info",
+  success: "text-success",
+  warning: "text-warning",
+  error: "text-error",
+};
+
 interface StatsProps extends HTMLAttributes<HTMLDivElement> {
   horizontal?: boolean;
   shadow?: boolean;
@@ -35,7 +45,7 @@ export function StatTitle({ className, ...props }: StatTitleProps) {
 }
 
 export function StatValue({ color, className, ...props }: StatValueProps) {
-  return <div className={cn("stat-value", color && `text-${color}`, className)} {...props} />;
+  return <div className={cn("stat-value", color && colorClass[color], className)} {...props} />;
 }
 
 export function StatDesc({ className, ...props }: StatDescProps) {

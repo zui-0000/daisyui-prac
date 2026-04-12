@@ -11,6 +11,17 @@ type DropdownPosition =
   | "left-end"
   | "right-end";
 
+const positionClass: Record<DropdownPosition, string> = {
+  top: "dropdown-top",
+  bottom: "dropdown-bottom",
+  left: "dropdown-left",
+  right: "dropdown-right",
+  "top-end": "dropdown-top-end",
+  "bottom-end": "dropdown-bottom-end",
+  "left-end": "dropdown-left-end",
+  "right-end": "dropdown-right-end",
+};
+
 interface DropdownProps extends HTMLAttributes<HTMLDivElement> {
   position?: DropdownPosition;
   hover?: boolean;
@@ -27,7 +38,7 @@ export function Dropdown({ position, hover, open, className, children, ...props 
     <div
       className={cn(
         "dropdown",
-        position && `dropdown-${position}`,
+        position && positionClass[position],
         hover && "dropdown-hover",
         open && "dropdown-open",
         className,

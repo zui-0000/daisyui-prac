@@ -3,6 +3,13 @@ import type { TableHTMLAttributes } from "react";
 
 type TableSize = "xs" | "sm" | "md" | "lg";
 
+const sizeClass: Record<TableSize, string> = {
+  xs: "table-xs",
+  sm: "table-sm",
+  md: "table-md",
+  lg: "table-lg",
+};
+
 interface TableProps extends TableHTMLAttributes<HTMLTableElement> {
   zebra?: boolean;
   pinRows?: boolean;
@@ -18,7 +25,7 @@ export function Table({ zebra, pinRows, pinCols, tableSize, className, ...props 
         zebra && "table-zebra",
         pinRows && "table-pin-rows",
         pinCols && "table-pin-cols",
-        tableSize && `table-${tableSize}`,
+        tableSize && sizeClass[tableSize],
         className,
       )}
       {...props}

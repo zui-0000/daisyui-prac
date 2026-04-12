@@ -3,6 +3,14 @@ import type { HTMLAttributes, LiHTMLAttributes } from "react";
 
 type MenuSize = "xs" | "sm" | "md" | "lg" | "xl";
 
+const sizeClass: Record<MenuSize, string> = {
+  xs: "menu-xs",
+  sm: "menu-sm",
+  md: "menu-md",
+  lg: "menu-lg",
+  xl: "menu-xl",
+};
+
 interface MenuProps extends HTMLAttributes<HTMLUListElement> {
   menuSize?: MenuSize;
   horizontal?: boolean;
@@ -20,7 +28,7 @@ export function Menu({ menuSize, horizontal, compact, className, ...props }: Men
     <ul
       className={cn(
         "menu",
-        menuSize && `menu-${menuSize}`,
+        menuSize && sizeClass[menuSize],
         horizontal && "menu-horizontal",
         compact && "menu-compact",
         className,

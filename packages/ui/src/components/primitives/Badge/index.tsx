@@ -13,6 +13,25 @@ type BadgeColor =
   | "ghost";
 type BadgeSize = "xs" | "sm" | "md" | "lg" | "xl";
 
+const colorClass: Record<BadgeColor, string> = {
+  neutral: "badge-neutral",
+  primary: "badge-primary",
+  secondary: "badge-secondary",
+  accent: "badge-accent",
+  info: "badge-info",
+  success: "badge-success",
+  warning: "badge-warning",
+  error: "badge-error",
+  ghost: "badge-ghost",
+};
+const sizeClass: Record<BadgeSize, string> = {
+  xs: "badge-xs",
+  sm: "badge-sm",
+  md: "badge-md",
+  lg: "badge-lg",
+  xl: "badge-xl",
+};
+
 interface BadgeProps extends HTMLAttributes<HTMLSpanElement> {
   color?: BadgeColor;
   size?: BadgeSize;
@@ -25,8 +44,8 @@ export function Badge({ color, size, outline, dash, className, ...props }: Badge
     <span
       className={cn(
         "badge",
-        color && `badge-${color}`,
-        size && `badge-${size}`,
+        color && colorClass[color],
+        size && sizeClass[size],
         outline && "badge-outline",
         dash && "badge-dash",
         className,

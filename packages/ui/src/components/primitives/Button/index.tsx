@@ -15,6 +15,31 @@ type ButtonColor =
 type ButtonSize = "xs" | "sm" | "md" | "lg" | "xl";
 type ButtonVariant = "outline" | "dash" | "soft";
 
+const colorClass: Record<ButtonColor, string> = {
+  neutral: "btn-neutral",
+  primary: "btn-primary",
+  secondary: "btn-secondary",
+  accent: "btn-accent",
+  info: "btn-info",
+  success: "btn-success",
+  warning: "btn-warning",
+  error: "btn-error",
+  ghost: "btn-ghost",
+  link: "btn-link",
+};
+const sizeClass: Record<ButtonSize, string> = {
+  xs: "btn-xs",
+  sm: "btn-sm",
+  md: "btn-md",
+  lg: "btn-lg",
+  xl: "btn-xl",
+};
+const variantClass: Record<ButtonVariant, string> = {
+  outline: "btn-outline",
+  dash: "btn-dash",
+  soft: "btn-soft",
+};
+
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   color?: ButtonColor;
   size?: ButtonSize;
@@ -45,9 +70,9 @@ export function Button({
     <button
       className={cn(
         "btn",
-        color && `btn-${color}`,
-        size && `btn-${size}`,
-        variant && `btn-${variant}`,
+        color && colorClass[color],
+        size && sizeClass[size],
+        variant && variantClass[variant],
         wide && "btn-wide",
         block && "btn-block",
         circle && "btn-circle",
