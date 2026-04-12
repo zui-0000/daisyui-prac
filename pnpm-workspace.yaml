@@ -6,7 +6,7 @@ catalogs:
     "@fontsource-variable/geist": "^5.2.8"
     "@tanstack/react-router": ^1.168.18
     "clsx": "^2.1.1"
-    "lucide-react": ^1.7.0
+    "lucide-react": ^1.8.0
     "react": ^19.2.5
     "react-dom": ^19.2.5
   devDependencies:
@@ -18,10 +18,10 @@ catalogs:
     "@types/node": 24.12.0
     "@types/react": ^19.2.14
     "@types/react-dom": ^19.2.3
-    "@typescript/native-preview": 7.0.0-dev.20260406.1
+    "@typescript/native-preview": 7.0.0-dev.20260412.1
     "@vitejs/plugin-react": ^6.0.1
-    "globals": ^17.4.0
-    "knip": ^6.3.0
+    "globals": ^17.5.0
+    "knip": ^6.4.0
     "lefthook": ^2.1.5
     "npm-run-all2": ^8.0.4
     "sort-package-json": ^3.6.1
