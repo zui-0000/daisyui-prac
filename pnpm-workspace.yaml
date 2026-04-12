@@ -31,7 +31,7 @@ catalogs:
     "sort-package-json": ^3.6.1
     "daisyui": "^5.0.0"
     "tailwindcss": "^4.2.1"
-    "turbo": ^2.9.4
+    "turbo": ^2.9.6
     "typescript": ~5.9.3
     "vite": ^8.0.5
 
