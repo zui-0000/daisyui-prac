@@ -23,15 +23,11 @@
   "dependencies": {
     "@fontsource-variable/geist": "catalog:dependencies",
     "@packages/ui": "workspace:*",
-    "@tanstack/react-form": "catalog:dependencies",
-    "@tanstack/react-query": "catalog:dependencies",
     "@tanstack/react-router": "catalog:dependencies",
     "clsx": "catalog:dependencies",
-    "effect": "catalog:dependencies",
     "lucide-react": "catalog:dependencies",
     "react": "catalog:dependencies",
-    "react-dom": "catalog:dependencies",
-    "zod": "catalog:dependencies"
+    "react-dom": "catalog:dependencies"
   },
   "devDependencies": {
     "@biomejs/biome": "catalog:devDependencies",
