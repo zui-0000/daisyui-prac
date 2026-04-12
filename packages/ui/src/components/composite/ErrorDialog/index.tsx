@@ -1,5 +1,5 @@
-import { Button } from "../../atoms/Button";
-import { Modal, ModalAction, ModalBox } from "../../atoms/Modal";
+import { Button } from "../../primitives/Button";
+import { Modal, ModalAction, ModalBox } from "../../primitives/Modal";
 
 type ErrorDialogProps = {
   isOpen: boolean;

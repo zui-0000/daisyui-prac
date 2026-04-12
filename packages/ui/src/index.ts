@@ -1,3 +1,3 @@
-export * from "./components/atoms";
-export * from "./components/commons";
+export * from "./components/composite";
+export * from "./components/primitives";
 export { cn } from "./lib/utils";
