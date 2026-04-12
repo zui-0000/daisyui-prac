@@ -41,7 +41,7 @@ const pending = { pendingComponent: PageLoadingSpinner };
 
 export const componentsLayoutRoute = createRoute({
   getParentRoute: () => rootRoute,
-  path: pages.COMPONENTS,
+  path: pages.COMPONENTS.INDEX,
   ...pending,
 });
 

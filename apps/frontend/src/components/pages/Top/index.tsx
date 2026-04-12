@@ -13,7 +13,7 @@ export const TopPage: FC = () => (
       このプロジェクトで用意した DaisyUI ラッパーコンポーネントの一覧です。
       各コンポーネントの使い方とバリエーションを確認できます。
     </p>
-    <Link to={pages.COMPONENTS}>
+    <Link to={pages.COMPONENTS.INDEX}>
       <Button color="primary" size="lg">
         コンポーネントを見る →
       </Button>
