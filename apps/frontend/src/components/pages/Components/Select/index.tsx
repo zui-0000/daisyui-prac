@@ -1,19 +1,19 @@
 import { Select } from "@packages/ui";
 import type { FC } from "react";
-import { PageHeader } from "~/components/common/PageHeader";
-import { Section } from "~/components/common/Section";
+import { ComponentPageHeader } from "~/components/common/ComponentPageHeader";
+import { ComponentSection } from "~/components/common/ComponentSection";
 import { CommonLayout } from "~/components/layouts/CommonLayout";
 
 export const SelectPage: FC = () => (
   <CommonLayout>
     <div>
-      <PageHeader
+      <ComponentPageHeader
         title="Select"
         category="データ入力"
         description="ドロップダウン選択UIです。children に option 要素を渡します。color / selectSize / bordered などの Props が使えます。"
       />
 
-      <Section title="基本的な使い方">
+      <ComponentSection title="基本的な使い方">
         <Select defaultValue="">
           <option value="" disabled>
             選択してください
@@ -22,9 +22,9 @@ export const SelectPage: FC = () => (
           <option>オプション 2</option>
           <option>オプション 3</option>
         </Select>
-      </Section>
+      </ComponentSection>
 
-      <Section title="カラー" row={false}>
+      <ComponentSection title="カラー" row={false}>
         <Select color="primary">
           <option>Primary</option>
         </Select>
@@ -37,9 +37,9 @@ export const SelectPage: FC = () => (
         <Select color="error">
           <option>Error</option>
         </Select>
-      </Section>
+      </ComponentSection>
 
-      <Section title="サイズ">
+      <ComponentSection title="サイズ">
         <Select selectSize="xs">
           <option>XSmall</option>
         </Select>
@@ -52,7 +52,7 @@ export const SelectPage: FC = () => (
         <Select selectSize="lg">
           <option>Large</option>
         </Select>
-      </Section>
+      </ComponentSection>
     </div>
   </CommonLayout>
 );

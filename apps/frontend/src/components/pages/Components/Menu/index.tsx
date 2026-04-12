@@ -1,19 +1,19 @@
 import { Menu, MenuItem, MenuTitle } from "@packages/ui";
 import type { FC } from "react";
-import { PageHeader } from "~/components/common/PageHeader";
-import { Section } from "~/components/common/Section";
+import { ComponentPageHeader } from "~/components/common/ComponentPageHeader";
+import { ComponentSection } from "~/components/common/ComponentSection";
 import { CommonLayout } from "~/components/layouts/CommonLayout";
 
 export const MenuPage: FC = () => (
   <CommonLayout>
     <div>
-      <PageHeader
+      <ComponentPageHeader
         title="Menu"
         category="ナビゲーション"
         description="縦・横のナビゲーションメニューです。MenuItem の children にリンクや要素を渡します。active クラスは子要素（a タグ等）に直接付けます。"
       />
 
-      <Section title="縦メニュー（基本）">
+      <ComponentSection title="縦メニュー（基本）">
         <div className="w-48 rounded-xl border border-base-300 bg-base-100">
           <Menu>
             <MenuTitle>メニュー</MenuTitle>
@@ -33,9 +33,9 @@ export const MenuPage: FC = () => (
             </MenuItem>
           </Menu>
         </div>
-      </Section>
+      </ComponentSection>
 
-      <Section title="横メニュー" description="horizontal prop で横並びになります。">
+      <ComponentSection title="横メニュー" description="horizontal prop で横並びになります。">
         <div className="rounded-xl border border-base-300 bg-base-100 p-2">
           <Menu horizontal>
             <MenuItem>
@@ -54,9 +54,9 @@ export const MenuPage: FC = () => (
             </MenuItem>
           </Menu>
         </div>
-      </Section>
+      </ComponentSection>
 
-      <Section title="サイズ">
+      <ComponentSection title="サイズ">
         <div className="w-40 rounded-xl border border-base-300 bg-base-100">
           <Menu menuSize="xs">
             <MenuItem>
@@ -87,7 +87,7 @@ export const MenuPage: FC = () => (
             </MenuItem>
           </Menu>
         </div>
-      </Section>
+      </ComponentSection>
     </div>
   </CommonLayout>
 );

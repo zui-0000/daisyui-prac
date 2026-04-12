@@ -1,19 +1,19 @@
 import { Stat, StatDesc, StatFigure, StatTitle, StatValue, Stats } from "@packages/ui";
 import type { FC } from "react";
-import { PageHeader } from "~/components/common/PageHeader";
-import { Section } from "~/components/common/Section";
+import { ComponentPageHeader } from "~/components/common/ComponentPageHeader";
+import { ComponentSection } from "~/components/common/ComponentSection";
 import { CommonLayout } from "~/components/layouts/CommonLayout";
 
 export const StatPage: FC = () => (
   <CommonLayout>
     <div>
-      <PageHeader
+      <ComponentPageHeader
         title="Stat"
         category="データ表示"
         description="数値や統計情報を表示するコンポーネントです。Stats > Stat > StatTitle / StatValue / StatDesc / StatFigure の構造で使います。"
       />
 
-      <Section title="基本的な使い方" row={false}>
+      <ComponentSection title="基本的な使い方" row={false}>
         <Stats shadow>
           <Stat>
             <StatTitle>総ユーザー数</StatTitle>
@@ -31,9 +31,9 @@ export const StatPage: FC = () => (
             <StatDesc>先月比 -0.3%</StatDesc>
           </Stat>
         </Stats>
-      </Section>
+      </ComponentSection>
 
-      <Section title="アイコン付き" row={false}>
+      <ComponentSection title="アイコン付き" row={false}>
         <Stats shadow>
           <Stat>
             <StatFigure className="text-primary">
@@ -58,9 +58,9 @@ export const StatPage: FC = () => (
             <StatDesc>Jan 1st - Feb 1st</StatDesc>
           </Stat>
         </Stats>
-      </Section>
+      </ComponentSection>
 
-      <Section title="横並び" row={false}>
+      <ComponentSection title="横並び" row={false}>
         <Stats horizontal shadow className="w-full max-w-xl">
           <Stat>
             <StatTitle>収益</StatTitle>
@@ -73,7 +73,7 @@ export const StatPage: FC = () => (
             <StatDesc>+8% 先月比</StatDesc>
           </Stat>
         </Stats>
-      </Section>
+      </ComponentSection>
     </div>
   </CommonLayout>
 );

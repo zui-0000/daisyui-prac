@@ -1,19 +1,19 @@
 import { Checkbox } from "@packages/ui";
 import type { FC } from "react";
-import { PageHeader } from "~/components/common/PageHeader";
-import { Section } from "~/components/common/Section";
+import { ComponentPageHeader } from "~/components/common/ComponentPageHeader";
+import { ComponentSection } from "~/components/common/ComponentSection";
 import { CommonLayout } from "~/components/layouts/CommonLayout";
 
 export const CheckboxPage: FC = () => (
   <CommonLayout>
     <div>
-      <PageHeader
+      <ComponentPageHeader
         title="Checkbox"
         category="データ入力"
         description="チェックボックス入力です。color / checkboxSize Props で見た目を変更できます。label と組み合わせる場合は FormField を使ってください。"
       />
 
-      <Section title="カラー">
+      <ComponentSection title="カラー">
         <Checkbox defaultChecked />
         <Checkbox color="primary" defaultChecked />
         <Checkbox color="secondary" defaultChecked />
@@ -21,17 +21,17 @@ export const CheckboxPage: FC = () => (
         <Checkbox color="success" defaultChecked />
         <Checkbox color="warning" defaultChecked />
         <Checkbox color="error" defaultChecked />
-      </Section>
+      </ComponentSection>
 
-      <Section title="サイズ">
+      <ComponentSection title="サイズ">
         <Checkbox checkboxSize="xs" defaultChecked />
         <Checkbox checkboxSize="sm" defaultChecked />
         <Checkbox checkboxSize="md" defaultChecked />
         <Checkbox checkboxSize="lg" defaultChecked />
         <Checkbox checkboxSize="xl" defaultChecked />
-      </Section>
+      </ComponentSection>
 
-      <Section title="状態">
+      <ComponentSection title="状態">
         <label htmlFor="state-unchecked" className="flex items-center gap-2">
           <Checkbox id="state-unchecked" color="primary" />
           <span>未チェック</span>
@@ -44,7 +44,7 @@ export const CheckboxPage: FC = () => (
           <Checkbox id="state-disabled" disabled />
           <span>無効</span>
         </label>
-      </Section>
+      </ComponentSection>
     </div>
   </CommonLayout>
 );

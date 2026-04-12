@@ -1,7 +1,7 @@
 import { Badge, Table } from "@packages/ui";
 import type { FC } from "react";
-import { PageHeader } from "~/components/common/PageHeader";
-import { Section } from "~/components/common/Section";
+import { ComponentPageHeader } from "~/components/common/ComponentPageHeader";
+import { ComponentSection } from "~/components/common/ComponentSection";
 import { CommonLayout } from "~/components/layouts/CommonLayout";
 
 const sampleData = [
@@ -14,13 +14,13 @@ const sampleData = [
 export const TablePage: FC = () => (
   <CommonLayout>
     <div>
-      <PageHeader
+      <ComponentPageHeader
         title="Table"
         category="データ表示"
         description="データテーブルです。zebra / pinRows / pinCols / tableSize Props でスタイルを変更できます。標準の thead / tbody / tr / th / td 要素と組み合わせて使います。"
       />
 
-      <Section title="基本的な使い方" row={false}>
+      <ComponentSection title="基本的な使い方" row={false}>
         <div className="overflow-x-auto">
           <Table>
             <thead>
@@ -47,9 +47,9 @@ export const TablePage: FC = () => (
             </tbody>
           </Table>
         </div>
-      </Section>
+      </ComponentSection>
 
-      <Section
+      <ComponentSection
         title="ゼブラストライプ"
         description="zebra prop で交互に背景色を付けます。"
         row={false}
@@ -72,9 +72,9 @@ export const TablePage: FC = () => (
             </tbody>
           </Table>
         </div>
-      </Section>
+      </ComponentSection>
 
-      <Section
+      <ComponentSection
         title="サイズ"
         description="tableSize prop で xs / sm / md / lg を指定します。"
         row={false}
@@ -97,7 +97,7 @@ export const TablePage: FC = () => (
             </tbody>
           </Table>
         </div>
-      </Section>
+      </ComponentSection>
     </div>
   </CommonLayout>
 );

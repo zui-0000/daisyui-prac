@@ -1,7 +1,7 @@
 import { Alert } from "@packages/ui";
 import type { FC } from "react";
-import { PageHeader } from "~/components/common/PageHeader";
-import { Section } from "~/components/common/Section";
+import { ComponentPageHeader } from "~/components/common/ComponentPageHeader";
+import { ComponentSection } from "~/components/common/ComponentSection";
 import { CommonLayout } from "~/components/layouts/CommonLayout";
 
 const InfoIcon = () => (
@@ -79,13 +79,13 @@ const ErrorIcon = () => (
 export const AlertPage: FC = () => (
   <CommonLayout>
     <div>
-      <PageHeader
+      <ComponentPageHeader
         title="Alert"
         category="フィードバック"
         description="情報・成功・警告・エラーなどのメッセージを伝えるアラートコンポーネントです。icon prop でアイコンを追加できます。"
       />
 
-      <Section title="バリアント" row={false}>
+      <ComponentSection title="バリアント" row={false}>
         <Alert>デフォルトのアラートです。</Alert>
         <Alert variant="info" icon={<InfoIcon />}>
           新しいアップデートが利用可能です。
@@ -99,12 +99,12 @@ export const AlertPage: FC = () => (
         <Alert variant="error" icon={<ErrorIcon />}>
           エラーが発生しました。もう一度お試しください。
         </Alert>
-      </Section>
+      </ComponentSection>
 
-      <Section title="アイコンなし" row={false}>
+      <ComponentSection title="アイコンなし" row={false}>
         <Alert variant="info">情報メッセージ（アイコンなし）</Alert>
         <Alert variant="success">成功メッセージ（アイコンなし）</Alert>
-      </Section>
+      </ComponentSection>
     </div>
   </CommonLayout>
 );

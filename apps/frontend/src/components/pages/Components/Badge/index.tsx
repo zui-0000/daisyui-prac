@@ -1,19 +1,19 @@
 import { Badge } from "@packages/ui";
 import type { FC } from "react";
-import { PageHeader } from "~/components/common/PageHeader";
-import { Section } from "~/components/common/Section";
+import { ComponentPageHeader } from "~/components/common/ComponentPageHeader";
+import { ComponentSection } from "~/components/common/ComponentSection";
 import { CommonLayout } from "~/components/layouts/CommonLayout";
 
 export const BadgePage: FC = () => (
   <CommonLayout>
     <div>
-      <PageHeader
+      <ComponentPageHeader
         title="Badge"
         category="データ表示"
         description="ラベル・ステータス・カウントなどを示す小さなバッジです。color / size / outline / dash Props でスタイルを変更できます。"
       />
 
-      <Section title="カラー">
+      <ComponentSection title="カラー">
         <Badge>デフォルト</Badge>
         <Badge color="neutral">Neutral</Badge>
         <Badge color="primary">Primary</Badge>
@@ -24,9 +24,9 @@ export const BadgePage: FC = () => (
         <Badge color="warning">Warning</Badge>
         <Badge color="error">Error</Badge>
         <Badge color="ghost">Ghost</Badge>
-      </Section>
+      </ComponentSection>
 
-      <Section title="バリアント">
+      <ComponentSection title="バリアント">
         <Badge color="primary" outline>
           Outline
         </Badge>
@@ -36,9 +36,9 @@ export const BadgePage: FC = () => (
         <Badge color="primary" dash>
           Dash
         </Badge>
-      </Section>
+      </ComponentSection>
 
-      <Section title="サイズ">
+      <ComponentSection title="サイズ">
         <Badge color="primary" size="xs">
           XSmall
         </Badge>
@@ -54,9 +54,9 @@ export const BadgePage: FC = () => (
         <Badge color="primary" size="xl">
           XLarge
         </Badge>
-      </Section>
+      </ComponentSection>
 
-      <Section
+      <ComponentSection
         title="テキストと組み合わせ"
         description="テキスト内に埋め込んだり、ボタンと組み合わせて使います。"
       >
@@ -72,7 +72,7 @@ export const BadgePage: FC = () => (
             NEW
           </Badge>
         </span>
-      </Section>
+      </ComponentSection>
     </div>
   </CommonLayout>
 );

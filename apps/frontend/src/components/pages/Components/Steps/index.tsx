@@ -1,28 +1,28 @@
 import { Step, Steps } from "@packages/ui";
 import type { FC } from "react";
-import { PageHeader } from "~/components/common/PageHeader";
-import { Section } from "~/components/common/Section";
+import { ComponentPageHeader } from "~/components/common/ComponentPageHeader";
+import { ComponentSection } from "~/components/common/ComponentSection";
 import { CommonLayout } from "~/components/layouts/CommonLayout";
 
 export const StepsPage: FC = () => (
   <CommonLayout>
     <div>
-      <PageHeader
+      <ComponentPageHeader
         title="Steps"
         category="ナビゲーション"
         description="多段階のプロセスを示すステップインジケーターです。Step に color を指定するとその色でハイライトされます。dataContent で内容を表示できます。"
       />
 
-      <Section title="基本的な使い方" row={false}>
+      <ComponentSection title="基本的な使い方" row={false}>
         <Steps>
           <Step color="primary">登録</Step>
           <Step color="primary">確認</Step>
           <Step color="primary">支払い</Step>
           <Step>完了</Step>
         </Steps>
-      </Section>
+      </ComponentSection>
 
-      <Section title="カラー" row={false}>
+      <ComponentSection title="カラー" row={false}>
         <Steps>
           <Step color="primary">Primary</Step>
           <Step color="secondary">Secondary</Step>
@@ -30,9 +30,9 @@ export const StepsPage: FC = () => (
           <Step color="success">Success</Step>
           <Step>未完了</Step>
         </Steps>
-      </Section>
+      </ComponentSection>
 
-      <Section
+      <ComponentSection
         title="dataContent（アイコン表示）"
         description="dataContent prop でチェックマークや数字を表示します。"
         row={false}
@@ -49,9 +49,9 @@ export const StepsPage: FC = () => (
           </Step>
           <Step dataContent="?">未着手</Step>
         </Steps>
-      </Section>
+      </ComponentSection>
 
-      <Section
+      <ComponentSection
         title="縦並び"
         description="vertical prop で縦方向のステップになります。"
         row={false}
@@ -62,7 +62,7 @@ export const StepsPage: FC = () => (
           <Step color="primary">支払い方法登録</Step>
           <Step>開始</Step>
         </Steps>
-      </Section>
+      </ComponentSection>
     </div>
   </CommonLayout>
 );

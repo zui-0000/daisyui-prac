@@ -1,8 +1,8 @@
 import { Tab, Tabs } from "@packages/ui";
 import type { FC } from "react";
 import { useState } from "react";
-import { PageHeader } from "~/components/common/PageHeader";
-import { Section } from "~/components/common/Section";
+import { PageHeader } from "~/components/common/ComponentPageHeader";
+import { Section } from "~/components/common/ComponentSection";
 import { CommonLayout } from "~/components/layouts/CommonLayout";
 
 export const TabsPage: FC = () => {

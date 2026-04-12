@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import type { FC, ReactNode } from "react";
 
 interface SectionProps {
   title: string;
@@ -7,7 +7,12 @@ interface SectionProps {
   children: ReactNode;
 }
 
-export function Section({ title, description, row = true, children }: SectionProps) {
+export const ComponentSection: FC<SectionProps> = ({
+  title,
+  description,
+  row = true,
+  children,
+}) => {
   return (
     <section className="mb-10">
       <h2 className="mb-1 border-b border-base-300 pb-2 text-lg font-bold">{title}</h2>
@@ -15,4 +20,4 @@ export function Section({ title, description, row = true, children }: SectionPro
       <div className={row ? "flex flex-wrap items-center gap-3" : "space-y-3"}>{children}</div>
     </section>
   );
-}
+};

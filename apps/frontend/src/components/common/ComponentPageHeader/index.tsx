@@ -1,4 +1,5 @@
 import { Badge } from "@packages/ui";
+import type { FC } from "react";
 
 interface PageHeaderProps {
   title: string;
@@ -6,7 +7,7 @@ interface PageHeaderProps {
   category?: string;
 }
 
-export function PageHeader({ title, description, category }: PageHeaderProps) {
+export const ComponentPageHeader: FC<PageHeaderProps> = ({ title, description, category }) => {
   return (
     <div className="mb-10">
       {category && (
@@ -18,4 +19,4 @@ export function PageHeader({ title, description, category }: PageHeaderProps) {
       <p className="text-lg text-base-content/70">{description}</p>
     </div>
   );
-}
+};

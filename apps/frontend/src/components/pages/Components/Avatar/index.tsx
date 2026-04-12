@@ -1,19 +1,22 @@
 import { Avatar } from "@packages/ui";
 import type { FC } from "react";
-import { PageHeader } from "~/components/common/PageHeader";
-import { Section } from "~/components/common/Section";
+import { ComponentPageHeader } from "~/components/common/ComponentPageHeader";
+import { ComponentSection } from "~/components/common/ComponentSection";
 import { CommonLayout } from "~/components/layouts/CommonLayout";
 
 export const AvatarPage: FC = () => (
   <CommonLayout>
     <div>
-      <PageHeader
+      <ComponentPageHeader
         title="Avatar"
         category="データ表示"
         description="ユーザーのアバターを表示するコンポーネントです。画像またはプレースホルダーテキストを表示でき、online / offline のステータスも示せます。"
       />
 
-      <Section title="サイズ" description="size prop で xs / sm / md / lg / xl を指定します。">
+      <ComponentSection
+        title="サイズ"
+        description="size prop で xs / sm / md / lg / xl を指定します。"
+      >
         <Avatar
           src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
           size="xs"
@@ -39,9 +42,9 @@ export const AvatarPage: FC = () => (
           size="xl"
           alt="avatar"
         />
-      </Section>
+      </ComponentSection>
 
-      <Section
+      <ComponentSection
         title="形状"
         description="shape prop で circle（デフォルト）または square を指定します。"
       >
@@ -55,9 +58,9 @@ export const AvatarPage: FC = () => (
           shape="square"
           alt="square"
         />
-      </Section>
+      </ComponentSection>
 
-      <Section title="オンラインステータス">
+      <ComponentSection title="オンラインステータス">
         <Avatar
           src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
           online
@@ -68,9 +71,9 @@ export const AvatarPage: FC = () => (
           offline
           alt="offline"
         />
-      </Section>
+      </ComponentSection>
 
-      <Section
+      <ComponentSection
         title="プレースホルダー"
         description="src を省略し placeholder prop を使うとイニシャルなどを表示できます。"
       >
@@ -80,7 +83,7 @@ export const AvatarPage: FC = () => (
         <Avatar placeholder size="md">
           <span className="text-xl">AI</span>
         </Avatar>
-      </Section>
+      </ComponentSection>
     </div>
   </CommonLayout>
 );

@@ -1,19 +1,19 @@
 import { Button, Navbar, NavbarCenter, NavbarEnd, NavbarStart } from "@packages/ui";
 import type { FC } from "react";
-import { PageHeader } from "~/components/common/PageHeader";
-import { Section } from "~/components/common/Section";
+import { ComponentPageHeader } from "~/components/common/ComponentPageHeader";
+import { ComponentSection } from "~/components/common/ComponentSection";
 import { CommonLayout } from "~/components/layouts/CommonLayout";
 
 export const NavbarPage: FC = () => (
   <CommonLayout>
     <div>
-      <PageHeader
+      <ComponentPageHeader
         title="Navbar"
         category="ナビゲーション"
         description="ページ上部のナビゲーションバーです。NavbarStart / NavbarCenter / NavbarEnd の 3 エリアにコンテンツを配置します。"
       />
 
-      <Section title="基本的な使い方" row={false}>
+      <ComponentSection title="基本的な使い方" row={false}>
         <div className="w-full rounded-xl border border-base-300">
           <Navbar>
             <NavbarStart>
@@ -41,9 +41,9 @@ export const NavbarPage: FC = () => (
             </NavbarEnd>
           </Navbar>
         </div>
-      </Section>
+      </ComponentSection>
 
-      <Section title="ハンバーガーメニュー付き" row={false}>
+      <ComponentSection title="ハンバーガーメニュー付き" row={false}>
         <div className="w-full rounded-xl border border-base-300">
           <Navbar>
             <NavbarStart>
@@ -66,9 +66,9 @@ export const NavbarPage: FC = () => (
             </NavbarEnd>
           </Navbar>
         </div>
-      </Section>
+      </ComponentSection>
 
-      <Section title="検索バー付き" row={false}>
+      <ComponentSection title="検索バー付き" row={false}>
         <div className="w-full rounded-xl border border-base-300">
           <Navbar>
             <NavbarStart>
@@ -93,7 +93,7 @@ export const NavbarPage: FC = () => (
             </NavbarEnd>
           </Navbar>
         </div>
-      </Section>
+      </ComponentSection>
     </div>
   </CommonLayout>
 );

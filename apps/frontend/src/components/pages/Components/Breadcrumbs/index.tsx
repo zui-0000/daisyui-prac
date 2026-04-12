@@ -1,27 +1,27 @@
 import { BreadcrumbItem, Breadcrumbs } from "@packages/ui";
 import type { FC } from "react";
-import { PageHeader } from "~/components/common/PageHeader";
-import { Section } from "~/components/common/Section";
+import { ComponentPageHeader } from "~/components/common/ComponentPageHeader";
+import { ComponentSection } from "~/components/common/ComponentSection";
 import { CommonLayout } from "~/components/layouts/CommonLayout";
 
 export const BreadcrumbsPage: FC = () => (
   <CommonLayout>
     <div>
-      <PageHeader
+      <ComponentPageHeader
         title="Breadcrumbs"
         category="ナビゲーション"
         description="現在地を示すパンくずリストです。Breadcrumbs の中に BreadcrumbItem を並べ、href を指定するとリンクになります。"
       />
 
-      <Section title="基本的な使い方">
+      <ComponentSection title="基本的な使い方">
         <Breadcrumbs>
           <BreadcrumbItem href="#">ホーム</BreadcrumbItem>
           <BreadcrumbItem href="#">ドキュメント</BreadcrumbItem>
           <BreadcrumbItem>コンポーネント</BreadcrumbItem>
         </Breadcrumbs>
-      </Section>
+      </ComponentSection>
 
-      <Section title="アイコン付き">
+      <ComponentSection title="アイコン付き">
         <Breadcrumbs>
           <BreadcrumbItem href="#">
             <span className="flex items-center gap-1">🏠 ホーム</span>
@@ -33,9 +33,9 @@ export const BreadcrumbsPage: FC = () => (
             <span className="flex items-center gap-1">📄 詳細</span>
           </BreadcrumbItem>
         </Breadcrumbs>
-      </Section>
+      </ComponentSection>
 
-      <Section title="長いパス">
+      <ComponentSection title="長いパス">
         <Breadcrumbs>
           <BreadcrumbItem href="#">Top</BreadcrumbItem>
           <BreadcrumbItem href="#">Level 1</BreadcrumbItem>
@@ -43,7 +43,7 @@ export const BreadcrumbsPage: FC = () => (
           <BreadcrumbItem href="#">Level 3</BreadcrumbItem>
           <BreadcrumbItem>Current</BreadcrumbItem>
         </Breadcrumbs>
-      </Section>
+      </ComponentSection>
     </div>
   </CommonLayout>
 );

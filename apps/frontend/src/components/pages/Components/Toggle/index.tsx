@@ -1,19 +1,19 @@
 import { Toggle } from "@packages/ui";
 import type { FC } from "react";
-import { PageHeader } from "~/components/common/PageHeader";
-import { Section } from "~/components/common/Section";
+import { ComponentPageHeader } from "~/components/common/ComponentPageHeader";
+import { ComponentSection } from "~/components/common/ComponentSection";
 import { CommonLayout } from "~/components/layouts/CommonLayout";
 
 export const TogglePage: FC = () => (
   <CommonLayout>
     <div>
-      <PageHeader
+      <ComponentPageHeader
         title="Toggle"
         category="データ入力"
         description="ON/OFF を切り替えるトグルスイッチです。内部的には checkbox として実装されています。"
       />
 
-      <Section title="カラー">
+      <ComponentSection title="カラー">
         <Toggle defaultChecked />
         <Toggle color="primary" defaultChecked />
         <Toggle color="secondary" defaultChecked />
@@ -21,17 +21,17 @@ export const TogglePage: FC = () => (
         <Toggle color="success" defaultChecked />
         <Toggle color="warning" defaultChecked />
         <Toggle color="error" defaultChecked />
-      </Section>
+      </ComponentSection>
 
-      <Section title="サイズ">
+      <ComponentSection title="サイズ">
         <Toggle toggleSize="xs" defaultChecked />
         <Toggle toggleSize="sm" defaultChecked />
         <Toggle toggleSize="md" defaultChecked />
         <Toggle toggleSize="lg" defaultChecked />
         <Toggle toggleSize="xl" defaultChecked />
-      </Section>
+      </ComponentSection>
 
-      <Section title="状態">
+      <ComponentSection title="状態">
         <label htmlFor="toggle-off" className="flex items-center gap-2">
           <Toggle id="toggle-off" color="primary" />
           <span>OFF</span>
@@ -44,7 +44,7 @@ export const TogglePage: FC = () => (
           <Toggle id="toggle-disabled" disabled />
           <span>無効</span>
         </label>
-      </Section>
+      </ComponentSection>
     </div>
   </CommonLayout>
 );
