@@ -1,9 +1,11 @@
 import { Radio } from "@packages/ui";
-import { PageHeader } from "../_components/PageHeader";
-import { Section } from "../_components/Section";
+import type { FC } from "react";
+import { PageHeader } from "~/components/common/PageHeader";
+import { Section } from "~/components/common/Section";
+import { CommonLayout } from "~/components/layouts/CommonLayout";
 
-export default function RadioPage() {
-  return (
+export const RadioPage: FC = () => (
+  <CommonLayout>
     <div>
       <PageHeader
         title="Radio"
@@ -45,5 +47,7 @@ export default function RadioPage() {
         <Radio name="size" radioSize="xl" />
       </Section>
     </div>
-  );
-}
+  </CommonLayout>
+);
+
+export default RadioPage;

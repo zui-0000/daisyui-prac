@@ -1,9 +1,11 @@
 import { Collapse, CollapseContent, CollapseTitle } from "@packages/ui";
-import { PageHeader } from "../_components/PageHeader";
-import { Section } from "../_components/Section";
+import type { FC } from "react";
+import { PageHeader } from "~/components/common/PageHeader";
+import { Section } from "~/components/common/Section";
+import { CommonLayout } from "~/components/layouts/CommonLayout";
 
-export default function CollapsePage() {
-  return (
+export const CollapsePage: FC = () => (
+  <CommonLayout>
     <div>
       <PageHeader
         title="Collapse"
@@ -62,5 +64,7 @@ export default function CollapsePage() {
         </div>
       </Section>
     </div>
-  );
-}
+  </CommonLayout>
+);
+
+export default CollapsePage;

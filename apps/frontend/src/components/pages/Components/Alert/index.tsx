@@ -1,6 +1,8 @@
 import { Alert } from "@packages/ui";
-import { PageHeader } from "../_components/PageHeader";
-import { Section } from "../_components/Section";
+import type { FC } from "react";
+import { PageHeader } from "~/components/common/PageHeader";
+import { Section } from "~/components/common/Section";
+import { CommonLayout } from "~/components/layouts/CommonLayout";
 
 const InfoIcon = () => (
   <svg
@@ -74,8 +76,8 @@ const ErrorIcon = () => (
   </svg>
 );
 
-export default function AlertPage() {
-  return (
+export const AlertPage: FC = () => (
+  <CommonLayout>
     <div>
       <PageHeader
         title="Alert"
@@ -104,5 +106,7 @@ export default function AlertPage() {
         <Alert variant="success">成功メッセージ（アイコンなし）</Alert>
       </Section>
     </div>
-  );
-}
+  </CommonLayout>
+);
+
+export default AlertPage;

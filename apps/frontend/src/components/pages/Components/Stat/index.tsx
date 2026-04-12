@@ -1,9 +1,11 @@
 import { Stat, StatDesc, StatFigure, StatTitle, StatValue, Stats } from "@packages/ui";
-import { PageHeader } from "../_components/PageHeader";
-import { Section } from "../_components/Section";
+import type { FC } from "react";
+import { PageHeader } from "~/components/common/PageHeader";
+import { Section } from "~/components/common/Section";
+import { CommonLayout } from "~/components/layouts/CommonLayout";
 
-export default function StatPage() {
-  return (
+export const StatPage: FC = () => (
+  <CommonLayout>
     <div>
       <PageHeader
         title="Stat"
@@ -73,5 +75,7 @@ export default function StatPage() {
         </Stats>
       </Section>
     </div>
-  );
-}
+  </CommonLayout>
+);
+
+export default StatPage;

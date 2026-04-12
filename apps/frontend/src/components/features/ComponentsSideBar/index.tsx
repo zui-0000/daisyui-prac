@@ -1,4 +1,5 @@
-import { Link, Outlet } from "@tanstack/react-router";
+import { Link } from "@tanstack/react-router";
+import type { FC } from "react";
 import { pages } from "~/constants/pages";
 
 const sidebarItems = [
@@ -65,33 +66,28 @@ const sidebarItems = [
   },
 ] as const;
 
-export default function ComponentsLayout() {
+export const ComponentsSideBar: FC = () => {
   return (
-    <div className="flex min-h-screen">
-      <aside className="sticky top-0 h-screen w-56 shrink-0 overflow-y-auto border-r border-base-300 bg-base-100 p-4">
-        <Link to={pages.COMPONENTS} className="mb-4 block text-lg font-bold">
-          DaisyUI Components
-        </Link>
-        <ul className="menu menu-sm w-full p-0">
-          {sidebarItems.map((group) => (
-            <li key={group.category}>
-              <span className="menu-title text-xs text-base-content/50">{group.category}</span>
-              <ul>
-                {group.items.map((item) => (
-                  <li key={item.path}>
-                    <Link to={item.path} activeProps={{ className: "active" }}>
-                      {item.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </li>
-          ))}
-        </ul>
-      </aside>
-      <main className="flex-1 overflow-y-auto p-10">
-        <Outlet />
-      </main>
-    </div>
+    <aside className="sticky top-0 h-screen w-56 shrink-0 overflow-y-auto border-r border-base-300 bg-base-100 p-4">
+      <Link to={pages.COMPONENTS} className="mb-4 block text-lg font-bold">
+        DaisyUI Components
+      </Link>
+      <ul className="menu menu-sm w-full p-0">
+        {sidebarItems.map((group) => (
+          <li key={group.category}>
+            <span className="menu-title text-xs text-base-content/50">{group.category}</span>
+            <ul>
+              {group.items.map((item) => (
+                <li key={item.path}>
+                  <Link to={item.path} activeProps={{ className: "active" }}>
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </li>
+        ))}
+      </ul>
+    </aside>
   );
-}
+};

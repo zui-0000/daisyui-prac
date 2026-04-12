@@ -1,9 +1,11 @@
 import { Button, Dropdown, DropdownItem, DropdownMenu } from "@packages/ui";
-import { PageHeader } from "../_components/PageHeader";
-import { Section } from "../_components/Section";
+import type { FC } from "react";
+import { PageHeader } from "~/components/common/PageHeader";
+import { Section } from "~/components/common/Section";
+import { CommonLayout } from "~/components/layouts/CommonLayout";
 
-export default function DropdownPage() {
-  return (
+export const DropdownPage: FC = () => (
+  <CommonLayout>
     <div>
       <PageHeader
         title="Dropdown"
@@ -91,5 +93,7 @@ export default function DropdownPage() {
         </Dropdown>
       </Section>
     </div>
-  );
-}
+  </CommonLayout>
+);
+
+export default DropdownPage;

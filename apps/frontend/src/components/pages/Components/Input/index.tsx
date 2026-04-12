@@ -1,9 +1,11 @@
 import { Input } from "@packages/ui";
-import { PageHeader } from "../_components/PageHeader";
-import { Section } from "../_components/Section";
+import type { FC } from "react";
+import { PageHeader } from "~/components/common/PageHeader";
+import { Section } from "~/components/common/Section";
+import { CommonLayout } from "~/components/layouts/CommonLayout";
 
-export default function InputPage() {
-  return (
+export const InputPage: FC = () => (
+  <CommonLayout>
     <div>
       <PageHeader
         title="Input"
@@ -39,5 +41,7 @@ export default function InputPage() {
         <Input ghost placeholder="Ghost" className="bg-base-200" />
       </Section>
     </div>
-  );
-}
+  </CommonLayout>
+);
+
+export default InputPage;

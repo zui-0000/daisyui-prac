@@ -1,9 +1,11 @@
 import { Button, Navbar, NavbarCenter, NavbarEnd, NavbarStart } from "@packages/ui";
-import { PageHeader } from "../_components/PageHeader";
-import { Section } from "../_components/Section";
+import type { FC } from "react";
+import { PageHeader } from "~/components/common/PageHeader";
+import { Section } from "~/components/common/Section";
+import { CommonLayout } from "~/components/layouts/CommonLayout";
 
-export default function NavbarPage() {
-  return (
+export const NavbarPage: FC = () => (
+  <CommonLayout>
     <div>
       <PageHeader
         title="Navbar"
@@ -93,5 +95,7 @@ export default function NavbarPage() {
         </div>
       </Section>
     </div>
-  );
-}
+  </CommonLayout>
+);
+
+export default NavbarPage;

@@ -1,9 +1,11 @@
 import { FileInput } from "@packages/ui";
-import { PageHeader } from "../_components/PageHeader";
-import { Section } from "../_components/Section";
+import type { FC } from "react";
+import { PageHeader } from "~/components/common/PageHeader";
+import { Section } from "~/components/common/Section";
+import { CommonLayout } from "~/components/layouts/CommonLayout";
 
-export default function FileInputPage() {
-  return (
+export const FileInputPage: FC = () => (
+  <CommonLayout>
     <div>
       <PageHeader
         title="FileInput"
@@ -33,5 +35,7 @@ export default function FileInputPage() {
         <FileInput multiple className="w-full max-w-sm" />
       </Section>
     </div>
-  );
-}
+  </CommonLayout>
+);
+
+export default FileInputPage;

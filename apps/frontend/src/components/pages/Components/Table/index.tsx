@@ -1,6 +1,8 @@
 import { Badge, Table } from "@packages/ui";
-import { PageHeader } from "../_components/PageHeader";
-import { Section } from "../_components/Section";
+import type { FC } from "react";
+import { PageHeader } from "~/components/common/PageHeader";
+import { Section } from "~/components/common/Section";
+import { CommonLayout } from "~/components/layouts/CommonLayout";
 
 const sampleData = [
   { id: 1, name: "山田 太郎", role: "開発者", status: "active" },
@@ -9,8 +11,8 @@ const sampleData = [
   { id: 4, name: "田中 美穂", role: "開発者", status: "active" },
 ];
 
-export default function TablePage() {
-  return (
+export const TablePage: FC = () => (
+  <CommonLayout>
     <div>
       <PageHeader
         title="Table"
@@ -97,5 +99,7 @@ export default function TablePage() {
         </div>
       </Section>
     </div>
-  );
-}
+  </CommonLayout>
+);
+
+export default TablePage;

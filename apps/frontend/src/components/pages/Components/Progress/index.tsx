@@ -1,9 +1,11 @@
 import { Progress } from "@packages/ui";
-import { PageHeader } from "../_components/PageHeader";
-import { Section } from "../_components/Section";
+import type { FC } from "react";
+import { PageHeader } from "~/components/common/PageHeader";
+import { Section } from "~/components/common/Section";
+import { CommonLayout } from "~/components/layouts/CommonLayout";
 
-export default function ProgressPage() {
-  return (
+export const ProgressPage: FC = () => (
+  <CommonLayout>
     <div>
       <PageHeader
         title="Progress"
@@ -32,5 +34,7 @@ export default function ProgressPage() {
         <Progress color="primary" className="w-full max-w-md" />
       </Section>
     </div>
-  );
-}
+  </CommonLayout>
+);
+
+export default ProgressPage;

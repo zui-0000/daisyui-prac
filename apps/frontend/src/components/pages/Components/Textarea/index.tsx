@@ -1,9 +1,11 @@
 import { Textarea } from "@packages/ui";
-import { PageHeader } from "../_components/PageHeader";
-import { Section } from "../_components/Section";
+import type { FC } from "react";
+import { PageHeader } from "~/components/common/PageHeader";
+import { Section } from "~/components/common/Section";
+import { CommonLayout } from "~/components/layouts/CommonLayout";
 
-export default function TextareaPage() {
-  return (
+export const TextareaPage: FC = () => (
+  <CommonLayout>
     <div>
       <PageHeader
         title="Textarea"
@@ -33,5 +35,7 @@ export default function TextareaPage() {
         <Textarea ghost placeholder="Ghost" className="bg-base-200" />
       </Section>
     </div>
-  );
-}
+  </CommonLayout>
+);
+
+export default TextareaPage;

@@ -1,5 +1,7 @@
 import { Badge, Card, CardBody, CardTitle } from "@packages/ui";
 import { Link } from "@tanstack/react-router";
+import type { FC } from "react";
+import { CommonLayout } from "~/components/layouts/CommonLayout";
 import { pages } from "~/constants/pages";
 
 const componentList = [
@@ -183,8 +185,8 @@ const componentList = [
 
 const categories = [...new Set(componentList.map((c) => c.category))];
 
-export default function ComponentsIndexPage() {
-  return (
+export const ComponentsIndexPage: FC = () => (
+  <CommonLayout>
     <div>
       <div className="mb-10">
         <h1 className="mb-3 text-4xl font-bold">DaisyUI Components</h1>
@@ -218,5 +220,7 @@ export default function ComponentsIndexPage() {
         </section>
       ))}
     </div>
-  );
-}
+  </CommonLayout>
+);
+
+export default ComponentsIndexPage;

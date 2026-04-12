@@ -1,9 +1,11 @@
 import { Checkbox } from "@packages/ui";
-import { PageHeader } from "../_components/PageHeader";
-import { Section } from "../_components/Section";
+import type { FC } from "react";
+import { PageHeader } from "~/components/common/PageHeader";
+import { Section } from "~/components/common/Section";
+import { CommonLayout } from "~/components/layouts/CommonLayout";
 
-export default function CheckboxPage() {
-  return (
+export const CheckboxPage: FC = () => (
+  <CommonLayout>
     <div>
       <PageHeader
         title="Checkbox"
@@ -44,5 +46,7 @@ export default function CheckboxPage() {
         </label>
       </Section>
     </div>
-  );
-}
+  </CommonLayout>
+);
+
+export default CheckboxPage;

@@ -1,9 +1,11 @@
 import { Loading } from "@packages/ui";
-import { PageHeader } from "../_components/PageHeader";
-import { Section } from "../_components/Section";
+import type { FC } from "react";
+import { PageHeader } from "~/components/common/PageHeader";
+import { Section } from "~/components/common/Section";
+import { CommonLayout } from "~/components/layouts/CommonLayout";
 
-export default function LoadingPage() {
-  return (
+export const LoadingPage: FC = () => (
+  <CommonLayout>
     <div>
       <PageHeader
         title="Loading"
@@ -55,5 +57,7 @@ export default function LoadingPage() {
         <Loading variant="spinner" loadingSize="xl" />
       </Section>
     </div>
-  );
-}
+  </CommonLayout>
+);
+
+export default LoadingPage;

@@ -1,9 +1,11 @@
 import { Button } from "@packages/ui";
-import { PageHeader } from "../_components/PageHeader";
-import { Section } from "../_components/Section";
+import type { FC } from "react";
+import { PageHeader } from "~/components/common/PageHeader";
+import { Section } from "~/components/common/Section";
+import { CommonLayout } from "~/components/layouts/CommonLayout";
 
-export default function ButtonPage() {
-  return (
+export const ButtonPage: FC = () => (
+  <CommonLayout>
     <div>
       <PageHeader
         title="Button"
@@ -75,5 +77,7 @@ export default function ButtonPage() {
         </Button>
       </Section>
     </div>
-  );
-}
+  </CommonLayout>
+);
+
+export default ButtonPage;

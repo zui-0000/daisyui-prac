@@ -1,9 +1,11 @@
 import { Toggle } from "@packages/ui";
-import { PageHeader } from "../_components/PageHeader";
-import { Section } from "../_components/Section";
+import type { FC } from "react";
+import { PageHeader } from "~/components/common/PageHeader";
+import { Section } from "~/components/common/Section";
+import { CommonLayout } from "~/components/layouts/CommonLayout";
 
-export default function TogglePage() {
-  return (
+export const TogglePage: FC = () => (
+  <CommonLayout>
     <div>
       <PageHeader
         title="Toggle"
@@ -44,5 +46,7 @@ export default function TogglePage() {
         </label>
       </Section>
     </div>
-  );
-}
+  </CommonLayout>
+);
+
+export default TogglePage;

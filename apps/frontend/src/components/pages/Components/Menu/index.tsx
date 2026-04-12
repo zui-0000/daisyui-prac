@@ -1,9 +1,11 @@
 import { Menu, MenuItem, MenuTitle } from "@packages/ui";
-import { PageHeader } from "../_components/PageHeader";
-import { Section } from "../_components/Section";
+import type { FC } from "react";
+import { PageHeader } from "~/components/common/PageHeader";
+import { Section } from "~/components/common/Section";
+import { CommonLayout } from "~/components/layouts/CommonLayout";
 
-export default function MenuPage() {
-  return (
+export const MenuPage: FC = () => (
+  <CommonLayout>
     <div>
       <PageHeader
         title="Menu"
@@ -87,5 +89,7 @@ export default function MenuPage() {
         </div>
       </Section>
     </div>
-  );
-}
+  </CommonLayout>
+);
+
+export default MenuPage;

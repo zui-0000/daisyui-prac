@@ -4,7 +4,6 @@ import { lazy } from "react";
 import { pages } from "~/constants/pages";
 import { rootRoute } from "~/router/rootRoute";
 
-const ComponentsLayout = lazy(() => import("~/components/pages/Components/Layout"));
 const ComponentsIndex = lazy(() => import("~/components/pages/Components/Index"));
 const ButtonPage = lazy(() => import("~/components/pages/Components/Button"));
 const DropdownPage = lazy(() => import("~/components/pages/Components/Dropdown"));
@@ -43,7 +42,6 @@ const pending = { pendingComponent: PageLoadingSpinner };
 export const componentsLayoutRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: pages.COMPONENTS,
-  component: ComponentsLayout,
   ...pending,
 });
 

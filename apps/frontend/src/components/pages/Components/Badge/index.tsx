@@ -1,9 +1,11 @@
 import { Badge } from "@packages/ui";
-import { PageHeader } from "../_components/PageHeader";
-import { Section } from "../_components/Section";
+import type { FC } from "react";
+import { PageHeader } from "~/components/common/PageHeader";
+import { Section } from "~/components/common/Section";
+import { CommonLayout } from "~/components/layouts/CommonLayout";
 
-export default function BadgePage() {
-  return (
+export const BadgePage: FC = () => (
+  <CommonLayout>
     <div>
       <PageHeader
         title="Badge"
@@ -72,5 +74,7 @@ export default function BadgePage() {
         </span>
       </Section>
     </div>
-  );
-}
+  </CommonLayout>
+);
+
+export default BadgePage;

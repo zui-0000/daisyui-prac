@@ -1,9 +1,11 @@
 import { Select } from "@packages/ui";
-import { PageHeader } from "../_components/PageHeader";
-import { Section } from "../_components/Section";
+import type { FC } from "react";
+import { PageHeader } from "~/components/common/PageHeader";
+import { Section } from "~/components/common/Section";
+import { CommonLayout } from "~/components/layouts/CommonLayout";
 
-export default function SelectPage() {
-  return (
+export const SelectPage: FC = () => (
+  <CommonLayout>
     <div>
       <PageHeader
         title="Select"
@@ -52,5 +54,7 @@ export default function SelectPage() {
         </Select>
       </Section>
     </div>
-  );
-}
+  </CommonLayout>
+);
+
+export default SelectPage;

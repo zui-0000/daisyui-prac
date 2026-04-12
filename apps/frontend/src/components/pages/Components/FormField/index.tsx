@@ -1,9 +1,11 @@
 import { Button, Checkbox, FormField, Input, Select, Textarea } from "@packages/ui";
-import { PageHeader } from "../_components/PageHeader";
-import { Section } from "../_components/Section";
+import type { FC } from "react";
+import { PageHeader } from "~/components/common/PageHeader";
+import { Section } from "~/components/common/Section";
+import { CommonLayout } from "~/components/layouts/CommonLayout";
 
-export default function FormFieldPage() {
-  return (
+export const FormFieldPage: FC = () => (
+  <CommonLayout>
     <div>
       <PageHeader
         title="FormField"
@@ -84,5 +86,7 @@ export default function FormFieldPage() {
         </form>
       </Section>
     </div>
-  );
-}
+  </CommonLayout>
+);
+
+export default FormFieldPage;
