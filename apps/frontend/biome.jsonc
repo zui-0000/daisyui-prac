@@ -69,7 +69,9 @@
   "linter": {
     "enabled": true,
     "domains": {
-      "react": "recommended"
+      "react": "recommended",
+      "tailwind": "recommended",
+      "turborepo": "all"
     },
     "rules": {
       "recommended": true,
