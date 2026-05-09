@@ -21,13 +21,3 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-
-## Panda
-styled-system
-styled-system-studio
-
-# Orval
-src/openapi
-
-# Coverage
-coverage

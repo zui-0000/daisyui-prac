@@ -6,7 +6,6 @@ import { defineConfig } from "vite";
 export default defineConfig(({ mode }) => ({
   define: {
     // Import.meta.env.VITE_APP_ENV の代わりに __APP_ENV__ を使用する
-    // (orvalのgenerate時にワーニングが出るため使用しないことにした)
     __APP_ENV__: JSON.stringify(mode),
   },
   plugins: [react(), tailwindcss()],

@@ -14,9 +14,7 @@
     "turbo-build:prd": "turbo run build:prd",
     "turbo-build:stg": "turbo run build:stg",
     "turbo-check:biome": "turbo run check:biome",
-    "turbo-check:type": "turbo run check:type",
-    "turbo-test": "turbo run test",
-    "turbo-test:coverage": "turbo run test:coverage"
+    "turbo-check:type": "turbo run check:type"
   },
   "devDependencies": {
     "@commitlint/cli": "catalog:devDependencies",
